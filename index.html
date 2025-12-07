@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>ЛР 8 — Вкладки та CSS Генератор</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="tabs">
+    <div class="tab whiteborder">Border-radius</div>
+    <div class="tab">Border</div>
+    <div class="tab">Border-color</div>
+
+    <div class="tabContent show">
+        <div class="generator">
+            <h3>Border-radius</h3>
+
+            <input type="range" id="rtl" min="0" max="100" value="0" oninput="generate()">
+            <input type="text" id="ttl"><br>
+
+            <input type="range" id="rtr" min="0" max="100" value="0" oninput="generate()">
+            <input type="text" id="ttr"><br>
+
+            <input type="range" id="rbr" min="0" max="100" value="0" oninput="generate()">
+            <input type="text" id="tbr"><br>
+
+            <input type="range" id="rbl" min="0" max="100" value="0" oninput="generate()">
+            <input type="text" id="tbl"><br>
+        </div>
+    </div>
+
+    <div class="tabContent hide">
+        <div class="generator">
+            <h3>Border</h3>
+            Товщина (px):
+            <input type="range" id="bw" min="0" max="20" value="1" oninput="generate()">
+        </div>
+    </div>
+
+    <div class="tabContent hide">
+        <div class="generator">
+            <h3>Border-color</h3>
+            Колір:
+            <input type="color" id="bc" oninput="generate()">
+        </div>
+    </div>
+</div>
+
+<div id="block"></div>
+
+<textarea id="cssText"></textarea>
+
+<script src="script.js"></script>
+</body>
+</html>
